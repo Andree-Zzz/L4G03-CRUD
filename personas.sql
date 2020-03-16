@@ -22,17 +22,15 @@ CREATE TABLE IF NOT EXISTS `personas` (
   `nombre` varchar(80) DEFAULT NULL,
   `email` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla personas.personas: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla personas.personas: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `personas` DISABLE KEYS */;
 INSERT INTO `personas` (`id`, `nombre`, `email`) VALUES
-	(1, 'andres', 'mad08061@gmail.com'),
-	(2, 'frederick', 'perro@gg'),
-	(3, 'artur', 'ssj@gmail.com'),
-	(4, '', ''),
-	(5, 'andres', 'mad08061@gmail.com'),
-	(6, 'camo', '230o120o21');
+	(1, 'andres', 'ssj@gmail.com'),
+	(2, 'frederick', 'fuudm125@hotmail.com'),
+	(3, 'artur', 'perro@gg'),
+	(4, 'marcos', 'marquenco@gg');
 /*!40000 ALTER TABLE `personas` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -1,3 +1,8 @@
+<?php
+    include("include/db.php");
+    $sql="select * from personas";
+    $result=DB::query($sql);//--> mysqli_query($con,$query)
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,21 +17,22 @@
             <td>id</td>
             <td>nombre</td>
             <td>email</td>
+            <td>crud</td>
         </tr>
         <tr >
             <?php
-            $con= new mysqli("localhost","root","","personas");
-            $query="select * from personas";
-            $result=$con->query($query);//--> mysqli_query($con,$query)
             while($mostrar=mysqli_fetch_array($result)){
             ?>
             <td><?php echo $mostrar['id']?></td>
             <td><?php echo $mostrar['nombre']?></td>
             <td><?php echo $mostrar['email']?></td>
+            <td>
+            <a href="editar.php?id=<?= $mostrar["id"]; ?>">Editar</a>
+            <a href="eliminar.php?id=<?= $mostrar["id"]; ?>">Eliminar</a>
+            </td>
         </tr>
             <?php 
             }
-            $con->close();
             ?>
     </table>
     </form>
